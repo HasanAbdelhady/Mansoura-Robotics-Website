@@ -1,0 +1,893 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+@font-face {
+    font-family: 'Akira Expanded Super Bold';
+    src: url('AKIRA EXPANDED DEMO.woff2') format('woff2'),
+         url('AKIRA EXPANDED DEMO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Akira Expanded Super Bold', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    background: linear-gradient(to right, rgba(117, 4, 4, 0.5), rgba(0, 0, 109, 0.5));
+}
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+/* Nav bar Styling */
+header.hide{
+    display: none;
+}
+footer {
+    background: rgb(241, 239, 239);
+    color: black;
+}
+footer i{
+    font-size: 2em;
+    margin:0.4%;
+}
+#logo {
+    background: url('MR%20Logo%20black.png') no-repeat left center / contain;
+}
+
+nav {
+    display:flex;
+    flex-direction: row;
+}
+
+nav ul {
+    position:relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    
+}
+
+nav ul li a {
+    border-right: 2px solid red;
+
+}
+
+nav a {
+    color: black;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff4757;
+    background-color: rgba(126, 124, 124, 0.3);
+    border-radius: 5px;
+}
+.closelist {
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Initially hidden, will be shown in responsive media query */
+    position: absolute; /* Use absolute positioning */
+    top: 0; /* Align to the top of the container */
+    right: 0; /* Align to the right of the container */
+    box-sizing: border-box;
+    padding: 1.5%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+
+}
+.checkbtn { 
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor:pointer;
+    display: none; /* Initially hidden, will be shown in responsive media query */
+}
+    
+#check {
+    display: none;
+    }
+#about-us-intro{
+    background: linear-gradient(90deg, rgba(117, 4, 4, 0.5), rgba(0, 0, 109, 0.5));
+}
+#about-us-intro p,.img{
+    box-shadow: 0 10px 30px rgba(0, 0, 0);
+}
+#about-us-intro p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+#about-us-intro .img{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.307)), 
+    url('Our\ Team.png') center center / cover no-repeat fixed;
+    height: 46vh;
+}
+#about-us-intro p:hover, #about-us-intro .img:hover{
+    border: 2px solid #ff4757;
+    scale: 1.01; 
+}
+#about-us-intro a{
+    padding: 5px;
+}
+#about-us-intro a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+#our-latest-post .latest{
+    border: 2px solid #fff;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0);
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.307));
+}
+
+#our-latest-post .latest:hover{
+    scale:1.02;
+    border: 2px solid #ff4757;
+}
+
+/* Night Mode specific styles */
+.night-mode{
+    background: linear-gradient(to right, rgba(117, 4, 4, 0.5), rgba(0, 0, 109, 0.5));
+}
+.night-mode #home-intro {
+    background: linear-gradient(to right, rgba(117, 4, 4, 0.5), rgba(0, 0, 109, 0.5)),
+    url('MR BOYZ.jpg') center center / cover no-repeat fixed;
+    }
+    
+.night-mode header, .night-mode footer{
+    background: rgb(0, 0, 0);
+    color: white;
+    }
+    
+.night-mode nav a {
+    color: white;
+    }
+    
+.night-mode nav a:hover {
+    color: #4d6dff;
+    background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+.night-mode #logo {
+    background: url('MR%20Logo%20white.png') no-repeat left center / contain;
+    }
+    
+.night-mode #modeToggle {
+    background-color: black;
+    color: white;
+    border-color: white;
+    }
+.night-mode .checkbtn, .night-mode.closelist{
+    color: white;
+}
+    
+/* Mode Toggle Button */
+#modeToggle {
+font-size: 1em;
+background-color: #f0f0f0;
+color: black;
+border: 2px solid #333;
+border-radius: 20px;
+padding: 8px 20px;
+cursor: pointer;
+transition: all 0.3s ease;
+font-weight: bold;
+}
+
+#modeToggle:hover {
+background-color: #333;
+color: #f0f0f0;
+border-color: #f0f0f0;
+}
+#modeToggle {
+    font-size: 0.9em; /* Slightly smaller font on small screens */
+    padding: 10px 15px;
+    border-radius: 15px; /* Slightly smaller border radius for smaller screens */
+    margin-left: 10px;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(231, 15, 15, 0.688); /* Semi-red color */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+}
+/* Home Intro Styling */
+#home-intro{
+    height: 100svh;
+    background: linear-gradient(to right, rgba(170, 46, 25, 0.404), rgba(85, 85, 252, 0.397)), 
+    url('MR BOYZ.jpg') center center / cover no-repeat fixed;
+}
+.content{
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+#home-intro h1{
+    font-size: 4em;
+}
+#home-intro h1 span{
+    color: rgba(170, 46, 25);
+
+}
+#home-intro p{
+    font-size: 1.5em;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 34px;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 3%;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+     box-shadow:inset 2px 2px 2px 0px rgba(96, 78, 255, 0.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    background: linear-gradient(0deg, rgba(0, 3, 167, 0.397) 0%, rgba(240, 0, 0, 0.486) 100%);
+    line-height: 42px;
+    border: none;
+}
+.hero-btn span{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.hero-btn:before, .hero-btn:after{
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(253, 71, 65, 0.795);
+    box-shadow:
+     -7px -7px 20px 0px rgba(0, 41, 175, 0.9),
+     -4px -4px 5px 0px rgba(9, 42, 233, 0.9),
+     7px 7px 20px 0px rgba(0,0,0,.2),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;  
+}
+.hero-btn:before{
+    height: 0%;
+    width: 2px;
+ }
+ .hero-btn:after {
+   width: 0%;
+   height: 2px;
+ }
+ .hero-btn:hover{
+   color: rgb(255, 52, 52);
+   background: transparent;
+ }
+ .hero-btn:hover:before {
+   height: 100%;
+ }
+ .hero-btn:hover:after {
+   width: 100%;
+ }
+ .hero-btn span:before,
+ .hero-btn span:after {
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 0;
+   background: rgb(252, 1, 1);
+   box-shadow:
+    -7px -7px 20px 0px rgba(199, 0, 0, 0.9),
+    -4px -4px 5px 0px rgba(250, 43, 43, 0.9),
+    7px 7px 20px 0px rgba(0,0,0,.2),
+    4px 4px 5px 0px rgba(0,0,0,.3);
+   transition: all 0.3s ease;
+ }
+ .hero-btn span:before {
+   width: 2px;
+   height: 0%;
+ }
+ .hero-btn span:after {
+   height: 2px;
+   width: 0%;
+ }
+ .hero-btn span:hover:before {
+   height: 100%;
+   margin-left: -10px;
+ }
+ .hero-btn span:hover:after {
+   width: 110%;
+   margin-top: -3px;
+   margin-left: -5px;
+ }
+
+ #about-us h1{
+    font-size: 4em;
+}
+/* About Us Section */
+
+#about-us{
+    height:100vh;
+}
+.about-us{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.507)), 
+    url('Team Photo.png') center center / cover no-repeat fixed;
+}
+#about-us h1{
+    font-size: 4em;
+}
+.hackathon{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.507)), 
+    url('Hackathon.jpg') center center / cover no-repeat fixed !important;
+
+}
+.our-team{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.507)), 
+    url('Our\ Team.png') center center / cover no-repeat fixed;
+}
+
+.our-team .content{
+    padding-top: 10em;
+}
+/* Who We Are section styles */
+.who-we-are {
+    background: radial-gradient(circle, rgba(255, 39, 1, 0.584), rgb(0, 0, 0), rgba(1, 1, 228, 0.884));
+    animation: fadeIn 1s ease;
+}
+
+.who-we-are h1 {
+    font-size: 2em;
+    color: white;
+}
+.who-we-are::first-line{
+    font-weight: bold;
+}
+
+/* Mission Vision section styles */
+.mission-vision {
+    background: linear-gradient(to right, rgba(235, 58, 27, 0.705), rgba(12, 12, 167, 0.658));
+    animation: fadeIn 1s ease;
+}
+
+/* Mission and Vision cards styles */
+.mission,
+.vision {
+    border: 3px solid rgb(173, 5, 5);
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    animation: fadeInUpAndZoom 1s ease;
+}
+
+.mission:hover,
+.vision:hover {
+    box-shadow: 10px 10px 20px 0px rgba(92, 2, 2, 0.658);
+    transform: scale(1.05); /* Adjust the scaling factor as needed */
+}
+
+/* Committees section styles */
+.committees {
+    background: linear-gradient(to right, rgba(255, 39, 1, 0.7), rgba(0, 0, 0, 0.8), rgba(1, 1, 228, 0.7));
+    animation: fadeIn 1s ease;
+}
+.committees ul li {
+    margin-right: 10px; /* Adjust spacing between items */
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.committees ul li p {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.comm-content{
+    padding: 2.5em;
+}
+.committees .nontech-p{
+    font-size: 2em;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    margin: 5px;
+    border-bottom: 1px solid #fff;
+    width:40%;
+}
+.committees ul li img {
+    width: 220px;
+    height: 220px;
+    border-radius: 30%;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    position: relative;
+    padding:5px;
+}
+.committees ul li img:hover {
+    box-shadow: 10px 20px 20px 0px rgba(24, 23, 23, 0.4);
+    transform: scale(1.05); /* Adjust the scaling factor as needed */
+}
+.committees ul li:hover:after {
+    position: absolute;
+    content: attr(title);
+    display: inline-block;
+    left: 0px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    font-size: 0.7em;
+}
+.committees ul li:hover p {
+    display: block;
+}
+.committees .last {
+    margin: 0;
+}
+.our-heads{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(255, 39, 1, 0.7), rgba(0, 0, 0, 0.8), rgba(1, 1, 228, 0.7));
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    animation: fadeIn 1s ease;
+}
+.our-heads .head{
+    width: 250px;
+    height: 500px;
+    border: 2px solid #fff;
+    position: relative;
+    border-radius: 30px;
+    transition: box-shadow 0.3s ease-in-out;
+    display: inline-block;
+    margin-right: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0);
+    margin-bottom: 30px;
+    overflow: hidden;
+    animation: fadeInUpAndZoom 1s ease;
+}
+.our-heads .head:hover{
+    border: 2px solid rgb(250, 5, 5);
+    box-shadow: 10px 10px 20px 0px rgba(92, 2, 2, 0.658);
+    transform: scale(1.05); 
+}
+.our-heads .head img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    object-position: top !important;
+}
+
+.our-heads .head .social-media{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: black; /* Assuming you want white color for the text/icons */
+}
+.night-mode div .social-media{
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.39) !important;
+}
+.our-heads .head h1{
+    display: inline-block;
+    display: flex;
+    font-size: 1em;
+    padding-top: 10px;
+}
+.our-heads .head p{
+    display: inline-block;
+    display: flex;
+    font-size: 1em;
+}
+
+.our-heads .head span{
+    display: flex;
+    gap: 10px;
+    font-size: 28px;
+
+}
+#imgs-hackathon{
+    padding-top: 20px;
+    align-items: center;
+    width: 100%;
+}
+#imgs-hackathon ul{
+    width: 60rem;
+    height: 40rem;
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 20rem;
+    scroll-snap-type: x proximity;  
+}
+#imgs-hackathon ul::-webkit-scrollbar {
+    width: 12px;
+}
+
+#imgs-hackathon ul::-webkit-scrollbar-thumb {
+    background-color: rgba(231, 15, 15, 0.688); /* Semi-red color */
+    border-radius: 10px;
+}
+
+#imgs-hackathon ul::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+}
+
+#imgs-hackathon ul li{
+    min-width: 60rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+}
+#imgs-hackathon .img1{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.3)), 
+    url('Hackathon1.jpg') center center / cover no-repeat fixed !important;
+  
+}
+#imgs-hackathon .img2{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.3)), 
+    url('Hackathon2.jpg') center center / cover no-repeat fixed !important;
+  
+}
+#imgs-hackathon .img3{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.3)), 
+    url('Hackathon3.jpg') center center / cover no-repeat fixed !important;
+  
+}
+#imgs-hackathon .img4{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.3)), 
+    url('Hackathon4.jpg') center center / cover no-repeat fixed !important; 
+}
+#imgs-hackathon .img5{
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.3)), 
+    url('amer.jpg') center center / cover no-repeat fixed !important;
+}
+#hackathon-description{
+    width: 100%; 
+    height: auto;
+    padding: 20px;
+    text-align: left;
+    background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.507));
+
+}
+#hackathon-description h1{
+    font-size: 3em;
+}
+#hackathon-description p{
+    margin-top: 10px;
+    font-size: 2em;
+    background: linear-gradient(90deg, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.307));
+    border-radius: 8px;
+    width: 70%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0);
+    padding: 10px;
+}
+#hackathon-description p:hover{
+    scale: 1.02;
+}
+#past-hackathons ul{
+    padding: 20px;
+    justify-content: space-between;
+    padding-left: 8%;
+
+}
+#past-hackathons ul li{
+    width: 350px;
+    height: 310px;
+    border: 2px solid #fff;
+    position: relative;
+    align-items: center;
+    border-radius: 30px;
+    transition: box-shadow 0.3s ease-in-out;
+    display: inline-block;
+    margin-right: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+#past-hackathons ul li img{
+    width: 365px;
+    height: 75%;
+    object-fit:fill;
+    bottom: 0 !important;
+    margin-top: 25%;
+}
+#past-hackathons ul li h1{
+    position: absolute;
+    width: 100%;
+    height: 28.5%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: black; /* Assuming you want white color for the text/icons */
+    padding-top: 12%;
+    font-size: 1.1em;
+}
+#past-hackathons ul li:hover{
+    border: 2px solid #ff4757;
+    scale: 1.02;
+}
+.night-mode #past-hackathons ul li h1{
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* Keyframe animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.card-description::first-line {
+    font-weight: bold;
+}
+
+/* مشكلة ال Navbar هنا */
+/* Responsive adjustments */
+@media (max-width: 1500px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        position: absolute;
+        width: 60%;
+        height: 100vh;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        margin-top: 60px;
+        background-color: rgba(255, 96, 96, 0.322);
+        top: 60px; /* Adjusted to push the navbar below the header */
+        display: none;
+    }
+    .night-mode nav ul {
+        background-color: rgba(65, 1, 1, 0.473);
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    nav ul li a {
+        border: none;
+        border-bottom: 1px solid rgba(185, 3, 3, 0.801);
+    }
+    nav a {
+        margin: 5px 0;
+    }
+    .checkbtn{
+        margin-left: 100px;
+    }
+    .checkbtn,
+    .closelist {
+        display: flex;    
+    }
+    #check:checked~ul {
+        left: 0;
+        display: block;
+    }
+}
+@media (max-width: 768px) {
+    footer{
+        font-size: 14px;
+    }
+    #about-us{
+        background-size: 120% 100%;
+        height: 50svh !important;
+    }
+    .mission-vision p{
+        font-size: 0.6em;
+        padding-right:20px;
+    }
+    .committees h1{
+        padding-bottom: 20px;
+        margin-top: -20px;
+    }
+    .committees ul{
+        flex-direction: column;
+        align-items: center;
+    }    
+    .committees ul li img {
+        width:75px;
+        height: 75px;
+        margin: 0;
+    }
+    .committees .nontech-p{
+        font-size: 0.9em;
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        margin: 5px;
+        border-bottom: 1px solid #fff;
+        width:40%;
+        align-items: center;
+    }
+    .committees{
+        align-items: center;
+        width: 100%;
+    }
+    .comm-content{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .comm-content ul{
+        display: flex;
+        align-items: center;
+    }
+    .committees ul li {
+        width: 150px;
+        height: 200px;
+        border-radius: 30%;
+        transition: all 0.3s ease-in-out;
+        border: 2px solid transparent;
+        position: relative;
+        padding:5px;
+        display: block;
+        align-items: center;
+    }
+
+    .committees ul li img {
+        width: 150px;
+        height: 150px;
+        border-radius: 30%;
+        transition: all 0.3s ease-in-out;
+        border: 2px solid transparent;
+        position: relative;
+        padding:5px;
+        align-items: center;
+
+    }
+    .our-heads{
+        margin-top: 0;
+    }
+    .head{
+        margin-bottom: 30px;
+    }
+    #hackathon-description p{
+        font-size: 0.8em;
+    }   
+    #imgs-hackathon li, #imgs-hackathon li .img5{
+        width: 80% !important;  
+        margin-left: 0px !important;
+    }
+    #past-hackathons ul{
+        padding-left: 27%;
+    }
+}
+
+header h1 {
+    font-size: 2em;
+    color: white;
+}
+/* تعديلات للشاشات الكبيرة */
+
+@media(max-width: 768px){
+    #home-intro h1, #about-us h1{
+        font-size: 2em;
+        margin-bottom: -6px;
+    }
+
+    #home-intro p{
+        font-size: 1em;
+    }
+    .who-we-are p{
+        font-size: 1em;
+    }
+    .hero-btn{
+        display: inline-block;
+        text-decoration: none;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+        border-radius: 6px;
+        margin: 3%;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+         box-shadow:inset 2px 2px 2px 0px rgba(96, 78, 255, 0.5),
+         7px 7px 20px 0px rgba(0,0,0,.1),
+         4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+        background: linear-gradient(0deg, rgba(0, 3, 167, 0.445) 0%, rgba(240, 0, 0, 0.425) 100%);
+        border: none;    
+        padding: 10px 20px;
+        font-size: 0.5em;
+        border-radius: 5px;
+        line-height: 12px;
+    }
+
+    
+ }
+ @media (min-width: 601px) and (max-width: 1024px) {
+    #modeToggle {
+    font-size: 1em; 
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+
+}
+}
+@media (min-width: 1025px) {
+#modeToggle {
+font-size: 1em; /* Slightly larger font for readability */
+padding: 12px 25px; /* Larger padding for a more prominent button */
+border-radius: 20px;
+margin-left: 10px;
+}
+}
+/* Keyframe animation */
+@keyframes fadeInUpAndZoom {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95); /* Adjust the initial offset and scaling factor */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+

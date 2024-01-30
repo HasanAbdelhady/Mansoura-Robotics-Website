@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block content %}
+<!-- الكلاس ده مهم لانه بيضيف سبيس من غيره هتلاقي الفوتر متشعلق خد بالك -->
+<div class="my-20"></div>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Test</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='tailwind.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <div
+        class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-20"
+      >
+        <div class="sm:flex sm:items-center px-6 py-4">
+          <img
+            class="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full"
+            src="https://via.placeholder.com/150"
+            alt="Profile Picture"
+          />
+          <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+            <p class="text-xl font-bold text-gray-900 leading-tight">
+              Omar Mohammed
+            </p>
+            <p class="text-sm font-medium text-gray-600">
+              Full Stack Developer
+            </p>
+            <div class="mt-4">
+              <a href="#" class="text-blue-500 hover:text-blue-700"
+                >View Profile</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-200 px-6 py-4">
+          <p class="text-sm text-gray-700">الصبر يارب</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+{% endblock %}

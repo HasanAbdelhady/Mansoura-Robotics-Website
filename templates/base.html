@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mansoura Robotics</title>
+    <!-- Include the CSS from libs.html -->
+    {% include 'libs.html' %}
+  </head>
+
+  <body>
+    <div>
+      <header
+        class="py-2 px-7 flex justify-between items-center bg-white text-black sticky w-full z-50 top-0"
+      >
+        <a href="/" id="logo" class="inline-block w-36 h-12 -indent-96"></a>
+        <nav class="flex flex-row">
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+            <li>
+              <a href="/"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="/about"><i class="fas fa-info-circle"></i> About Us</a>
+            </li>
+            <li>
+              <a href="/team"><i class="fas fa-users"></i> Team</a>
+            </li>
+            <li>
+              <a href="/hackathon"><i class="fas fa-code"></i> Hackathon</a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/MansouraRoboticsClub/"
+                target="_blank"
+                ><i class="fas fa-envelope"></i> Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div id="navbar-background"></div>
+
+        <button id="modeToggle" onclick="toggleMode()">
+          <i id="modeIcon" class="fas fa-moon"></i>
+        </button>
+      </header>
+      <section id="intro" class="relative m-auto w-full">
+        {% block content %} {% endblock %}
+      </section>
+
+      <!-- Footer updated because alot of stupid and boring bugs  -->
+      <footer
+        class="bg-gray-800 text-black py-4 text-center block bottom-0 w-full p-2"
+      >
+        <p>
+          <a
+            href="https://www.facebook.com/MansouraRoboticsClub"
+            target="_blank"
+            class="text-white"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/robotics_mu/"
+            target="_blank"
+            class="text-white"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/mansoura-robotics-club"
+            target="_blank"
+            class="text-white"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

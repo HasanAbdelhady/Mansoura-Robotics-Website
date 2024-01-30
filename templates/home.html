@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<div id="home-intro" class="w-full relative">
+  <div class="content w-full absolute left-2/4 text-center">
+    <h1>Mansoura <span>R</span>obotics</h1>
+    <p>MU's number 1 Robotics Club</p>
+    <a
+      href="https://www.facebook.com/MansouraRoboticsClub"
+      target="_blank"
+      class="hero-btn inline-block"
+    >
+      <span>Learn More</span>
+    </a>
+  </div>
+</div>
+<section
+  id="about-us-intro"
+  class="w-full h-auto p-5 justify-between flex flex-col gap-3 md:flex-row"
+>
+  <p
+    class="mb-4 p-5 text-xl text-left md:text-3xl rounded-xl border-2 border-solid border-white w-full md:w-3/5 md:pt-32"
+  >
+    Mansoura Robotics is a Student-run organization at Mansoura University that
+    aims to develop members' hard and soft skills, from Robotics to Data
+    Science, We have committees that.....
+    <a href="/about" style="color: red"> Read More</a>
+  </p>
+  <div
+    class="img flex p-5 rounded-xl border-2 border-solid border-white w-full md:w-2/5"
+  ></div>
+</section>
+<section id="our-latest-post" class="w-full h-auto p-5 text-3xl">
+  <a
+    href="https://www.facebook.com/MansouraRoboticsClub/posts/pfbid02i8ePhLH5qtWcwtHThoAjENCNdnuu5YvkQxVvThGxuK9CGVJUPHRNd6rT5BnH4QYl"
+    target="_blank"
+  >
+    <div
+      class="latest w-3/4 h-svh md:w-1/4 relative items-center inline-block overflow-hidden rounded-3xl"
+    >
+      <h1 class="mt-2 text-xl md:text-3xl">Our Latest Post</h1>
+      <img
+        src="../static/latestpost.jpg"
+        alt=""
+        class="object-fill bottom-0 inline-block"
+      />
+    </div>
+  </a>
+</section>
+
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends 'base.html' %} {% block content %}
+<div id="about-us" class="about-us relative">
+  <div class="content absolute left-2/4 w-1/2 text-center">
+    <h1>About Us</h1>
+    <hr />
+  </div>
+</div>
+
+<div class="who-we-are w-full m-auto text-center pt-12 pb-12">
+  <div>
+    <p class="m-2 ml-12 text-3xl">
+      Mansoura Robotics is a Student-run organization at Mansoura University
+      <br />
+      that aims to develop members' hard and soft skills, from Robotics to Data
+      Science,<br />
+      We have committees that tackle everybody's interests.
+    </p>
+  </div>
+  <hr />
+</div>
+<div
+  class="mission-vision w-full p-10 text-center pt-12 flex flex-col md:flex-row md:justify-between"
+>
+  <div class="vision m-8 box-border pt-10 pb-10 w-full md:w-1/2">
+    <h1 class="text-3xl text-white">Our Vision</h1>
+    <p
+      class="card-description text-2xl leading-10 text-justify text-white mt-5 mb-5 p-8"
+    >
+      Empowering Minds, Cultivating Innovation:
+      <span style="font-weight: bold !important">Mansoura Robotics</span>
+      envisions a future where students are equipped with a diverse skill set,
+      seamlessly integrating technical expertise and professional acumen. Our
+      vision is to foster a community of forward-thinking individuals who excel
+      in software, hardware, and mechanical design, transcending traditional
+      boundaries to encompass broader areas such as media, HR, business, and
+      event organizing.
+      <br />
+      By cultivating a culture of continuous learning and collaboration, we aim
+      to inspire the next generation of leaders who drive technological
+      innovation and contribute meaningfully to society.
+    </p>
+  </div>
+  <div class="mission m-8 box-border pt-10 pb-10 w-full md:w-1/2">
+    <h1 class="text-3xl text-white">Our Mission</h1>
+    <p
+      class="card-description text-2xl leading-10 text-justify p-8 text-white mt-5 mb-5"
+    >
+      At Mansoura Robotics, our mission is to create a vibrant learning hub
+      where members master software, hardware, and mechanical design, while also
+      delving into non-technical spheres like media, HR, and business. Through
+      hands-on experiences, workshops, and mentorship, we aim to equip our
+      community with diverse skills.
+      <br />
+      Our commitment extends to hosting the annual 'Hackathon,' a flagship event
+      that educates students beyond our team on the intricacies of our main
+      technical pillars and their sub-categories. Our goal is to inspire
+      lifelong learning, innovation, and leadership among the members of
+      Mansoura Robotics.
+    </p>
+  </div>
+  <hr class="md:hidden" />
+</div>
+<div
+  class="committees w-full h-auto text-center justify-between items-center pt-12"
+>
+  <h1 class="text-4xl text-white">Our Committees</h1>
+  <div class="comm-content">
+    <p class="nontech-p">Non-Technical :</p>
+    <ul class="flex justify-around mt-7">
+      <li title="Media Committee">
+        <a
+          href="https://www.facebook.com/photo?fbid=645791107661296&set=pcb.645602157680191"
+          target="_blank"
+          ><img
+            src="../static/Mobile Marketing.gif"
+            alt="Media Committee"
+            class="media"
+        /></a>
+      </li>
+      <li title="Business Committee">
+        <a
+          href="https://www.facebook.com/photo?fbid=645601451013595&set=pcb.645602157680191"
+          target="_blank"
+          ><img
+            src="../static/Business growth.gif"
+            alt="Business Committee"
+            class="bus"
+        /></a>
+      </li>
+      <li title="Organizing Committee">
+        <a
+          href="https://www.facebook.com/photo?fbid=645601487680258&set=pcb.645602157680191"
+          target="_blank"
+          ><img
+            src="../static/Business Plan.gif"
+            class="org"
+            alt="Organizing Committee"
+        /></a>
+      </li>
+      <li title="HR Committee">
+        <a
+          href="https://www.facebook.com/photo?fbid=645601457680261&set=pcb.645602157680191"
+          target="_blank"
+          ><img src="../static/Profiling.gif" alt="HR Committee" class="last"
+        /></a>
+      </li>
+    </ul>
+    <br />
+    <p class="nontech-p">Technical :</p>
+    <ul class="flex justify-around mt-7">
+      <li title="Software Committee">
+        <a href="https://fb.me/e/4x2Fql6dk" target="_blank"
+          ><img src="../static/software.gif" alt="Software" class="soft"
+        /></a>
+      </li>
+      <li title="Hardware Committee">
+        <a href="https://fb.me/e/4x2Fql6dk" target="_blank"
+          ><img src="../static/hardware.gif" alt="Hardware" class="bus"
+        /></a>
+      </li>
+      <li title="Mechanical Design Committee">
+        <a href="https://fb.me/e/4x2Fql6dk" target="_blank"
+          ><img
+            src="../static/mechanical.gif"
+            class="mechanical"
+            alt="mechanical"
+        /></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr />
+
+{% endblock %}
