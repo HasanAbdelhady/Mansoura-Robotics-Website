@@ -180,13 +180,10 @@ nav a:hover {
     
 /* Mode Toggle Button */
 #modeToggle {
-font-size: 1em;
 background-color: #f0f0f0;
 color: black;
 border: 2px solid #333;
 border-radius: 20px;
-padding: 8px 20px;
-cursor: pointer;
 transition: all 0.3s ease;
 font-weight: bold;
 }
@@ -197,8 +194,6 @@ color: #f0f0f0;
 border-color: #f0f0f0;
 }
 #modeToggle {
-    font-size: 0.9em; /* Slightly smaller font on small screens */
-    padding: 10px 15px;
     border-radius: 15px; /* Slightly smaller border radius for smaller screens */
     margin-left: 10px;
 }
@@ -223,9 +218,6 @@ body::-webkit-scrollbar-track {
 .content{
     top: 45%;
     transform: translate(-50%, -50%);
-}
-#home-intro h1{
-    font-size: 4em;
 }
 #home-intro h1 span{
     color: rgba(170, 46, 25);
@@ -322,21 +314,14 @@ body::-webkit-scrollbar-track {
    margin-top: -3px;
    margin-left: -5px;
  }
-
- #about-us h1{
-    font-size: 4em;
-}
 /* About Us Section */
 
 #about-us{
     height:100vh;
 }
-.about-us{
+.about-us-back{
     background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.507)), 
     url('Team Photo.png') center center / cover no-repeat fixed;
-}
-#about-us h1{
-    font-size: 4em;
 }
 .hackathon{
     background: linear-gradient(to right, rgba(255, 38, 0, 0.384), rgba(2, 2, 243, 0.507)), 
@@ -415,13 +400,11 @@ body::-webkit-scrollbar-track {
     padding: 2.5em;
 }
 .committees .nontech-p{
-    font-size: 2em;
     display: block;
     text-align: left;
     padding: 10px;
     margin: 5px;
     border-bottom: 1px solid #fff;
-    width:40%;
 }
 .committees ul li img {
     width: 220px;
@@ -693,7 +676,7 @@ body::-webkit-scrollbar-track {
     nav ul {
         position: absolute;
         width: 60%;
-        height: 100vh;
+        height: 40vh;
         left: -100%;
         text-align: center;
         transition: all .5s;
@@ -716,9 +699,6 @@ body::-webkit-scrollbar-track {
     nav a {
         margin: 5px 0;
     }
-    .checkbtn{
-        margin-left: 100px;
-    }
     .checkbtn,
     .closelist {
         display: flex;    
@@ -735,10 +715,6 @@ body::-webkit-scrollbar-track {
     #about-us{
         background-size: 120% 100%;
         height: 50svh !important;
-    }
-    .mission-vision p{
-        font-size: 0.6em;
-        padding-right:20px;
     }
     .committees h1{
         padding-bottom: 20px;
@@ -760,7 +736,6 @@ body::-webkit-scrollbar-track {
         padding: 10px;
         margin: 5px;
         border-bottom: 1px solid #fff;
-        width:40%;
         align-items: center;
     }
     .committees{
@@ -824,15 +799,12 @@ header h1 {
 /* تعديلات للشاشات الكبيرة */
 
 @media(max-width: 768px){
-    #home-intro h1, #about-us h1{
+    #home-intro h1{
         font-size: 2em;
         margin-bottom: -6px;
     }
 
     #home-intro p{
-        font-size: 1em;
-    }
-    .who-we-are p{
         font-size: 1em;
     }
     .hero-btn{
@@ -863,7 +835,6 @@ header h1 {
  }
  @media (min-width: 601px) and (max-width: 1024px) {
     #modeToggle {
-    font-size: 1em; 
     padding: 10px 20px;
     border-radius: 20px;
     margin-left: 10px;
@@ -872,7 +843,6 @@ header h1 {
 }
 @media (min-width: 1025px) {
 #modeToggle {
-font-size: 1em; /* Slightly larger font for readability */
 padding: 12px 25px; /* Larger padding for a more prominent button */
 border-radius: 20px;
 margin-left: 10px;
@@ -890,4 +860,3 @@ margin-left: 10px;
         transform: translateY(0) scale(1);
     }
 }
-
