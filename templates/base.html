@@ -14,9 +14,12 @@
         class="py-2 px-7 flex justify-between items-center bg-white text-black sticky w-full z-50 top-0 h-auto"
       >
         <a href="/" id="logo" class="inline-block w-36 h-12 -indent-96"></a>
-        <nav class="flex">
+        <nav class="flex lg:pl-20 lg:text-lg">
           <input type="checkbox" id="check" />
-          <label for="check" class="checkbtn relative flex left-10 md:left-64 lg:left-80">
+          <label
+            for="check"
+            class="checkbtn relative flex left-3 md:left-64 lg:left-80"
+          >
             <i class="fas fa-bars"></i>
           </label>
           <ul>
@@ -42,13 +45,15 @@
           </ul>
         </nav>
         <div id="navbar-background"></div>
-        <button id="modeToggle" class="flex right-0 text-sm md:text-xl py-3 px-5 cursor-pointer" onclick="toggleMode()">
+        <button
+          id="modeToggle"
+          class="flex relative right-0 md:right-1 lg:right-1 text-sm md:text-xl py-3 px-5 cursor-pointer"
+          onclick="toggleMode()"
+        >
           <i id="modeIcon" class="fas fa-moon"></i>
         </button>
       </header>
-      <section id="intro">
-        {% block content %} {% endblock %}
-      </section>
+      <section id="intro">{% block content %} {% endblock %}</section>
 
       <!-- Footer updated because alot of stupid and boring bugs  -->
       <footer
