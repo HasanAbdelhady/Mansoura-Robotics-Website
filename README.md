@@ -44,4 +44,4 @@ This is a checklist of the features I'm currently working on achieving:
 - [x] **Code Cleanup** 🧹: Remove unnecessary comments and ensure code cleanliness.
 - [x] **Backend Integration** ⚙️: Integrate a backend system using Flask.
 
-- Keep in mind that the currently deployed version is only version 1.0 of the website, with many additional features to come in the future
+- Keep in mind that the currently deployed version is only version 1.0 of the website, with many additional features to come in the future.
