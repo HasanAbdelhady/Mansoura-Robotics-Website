@@ -3,6 +3,8 @@
 This Website is mainly meant to be an introduction to anyone interested in our team and wants to know exactly who we are
 It's divided into 5 main sections: Home - About Us - Team - Hackathon - Contact Us
 
+"The Website is currently deployed using render.com, I'm using their free version, so it may take some time for pages to load, thanks for understanding"
+
 1- Home (https://mansourarobotics.onrender.com/): Just like the name suggests, it's the homepage of our website, which can also be seen as a kind of landing page to our Facebook page ( The Learn More button takes the user to our FB page ).
 
 ![image](https://github.com/HasanAbdelhady/Mansoura-Robotics-Website/assets/84288512/1edcb0f3-c83d-42dd-884f-89d8f1b4cd95)
