@@ -1,14 +1,14 @@
 # Mansoura Robotics Website 🤖
 
+This Website is mainly meant to be an introduction to anyone interested in our team and wants to know exactly who we are
+It's divided into 5 main sections: Home - About Us - Team - Hackathon - Contact Us
 
-## TODO Checklist ✅
-
-- [x] **External Admin Dashboard**: Implement an external admin dashboard for easy content management.
-- [x] **Dynamic Posts**: Create a dynamic post system to keep our audience updated with the latest news and information.
-- [x] **Fast & Secure Connection**: Optimize website performance for speed and ensure a secure connection.
+- [ ] **External Admin Dashboard**: Implement an external admin dashboard for easy content management.
+- [ ] **Dynamic Posts**: Create a dynamic post system to keep our audience updated with the latest news and information.
+- [ ] **Fast & Secure Connection**: Optimize website performance for speed and ensure a secure connection.
 - [x] **Navbar Enhancement** 🚀: Improve the design and aesthetics of the navbar.
 - [x] **Code Cleanup** 🧹: Remove unnecessary comments and ensure code cleanliness.
-- [x] **Backend Integration** ⚙️: Integrate a backend system using Flask or another advanced backend solution.
+- [x] **Backend Integration** ⚙️: Integrate a backend system using Flask.
 
 ## Issues 🐛
 
