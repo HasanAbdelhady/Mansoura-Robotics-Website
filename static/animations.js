@@ -1,9 +1,5 @@
-// ايفينت لما الصفحه تحمل عشان نعمل انيميشن Load
-// "On Load Animation" 
 document.addEventListener("DOMContentLoaded", function () {
-
-    // انيميشن للناف وايليمنت ال body
-    // حاسه حلو سيكا C: - نقدر نعمل اكتر بس ده مؤقت لحد منشوف
+    // On Load Animation
     anime.timeline({
         easing: 'easeInOutQuad',
         duration: 1000,
@@ -14,11 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
         scale: [0.8, 1],
     });
 
-// متغير ل زر تغيير الوضع بين دارك مود ولايت مود
-
+    // Dark Mode Toggle Animation
     const darkModeButton = document.getElementById("modeToggle");
 
-// انيميشن لما الماوس يلمس الزر
     darkModeButton.addEventListener("mouseenter", function () {
         anime({
             targets: darkModeButton,
@@ -29,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     darkModeButton.addEventListener("mouseleave", function () {
-        // هنا بنرجع حالة الماوس الطبيعيه لما الماوس يخرج عن السكيل
         anime({
             targets: darkModeButton,
             scale: 1,
@@ -37,4 +30,30 @@ document.addEventListener("DOMContentLoaded", function () {
             easing: 'easeInOutQuad',
         });
     });
+
+    // Dark Mode Toggle Functionality
+    let darkMode = false;
+
+    darkModeButton.addEventListener("click", function () {
+        darkMode = !darkMode;
+        toggleDarkMode();
+    });
+
+    function toggleDarkMode() {
+        anime({
+            targets: 'body',
+            backgroundColor: darkMode ? '#1a1a1a' : '#f0f0f0',
+            color: darkMode ? '#fff' : '#fff',
+            duration: 500,
+            easing: 'easeInOutQuad',
+        });
+
+        anime({
+            targets: darkModeButton,
+            backgroundColor: darkMode ? '#fff' : '#000',
+            color: darkMode ? '#000' : '#fff',
+            duration: 500,
+            easing: 'easeInOutQuad',
+        });
+    }
 });
